@@ -92,5 +92,9 @@ public class AnimalRepository : IAnimalRepository
         // animal.Description = animalDto.Description;
         //
         // lista.Add(animal);
+        
+        
+        // Connection string do pjatkowej bazy
+        //Data Source=db-mssql16.pjwstk.edu.pl;Initial Catalog=2019SBD/s28829;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False
     }
 }
