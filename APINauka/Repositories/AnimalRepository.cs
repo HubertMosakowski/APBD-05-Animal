@@ -8,8 +8,6 @@ namespace APINauka.Repositories;
 
 public class AnimalRepository : IAnimalRepository
 {
-    private List<Animal> lista = new();
-
     private IConfiguration _config;
     
     public AnimalRepository()
@@ -60,8 +58,9 @@ public class AnimalRepository : IAnimalRepository
         {
             string insertQuery = @"INSERT INTO Animal (Name, Description, Category, Area) VALUES
                                                       (@Name, @Description, @Category, @Area);";
-        
+            
             SqlCommand command = new SqlCommand(insertQuery , connection);
+            
             command.Parameters.AddWithValue("@Name", animalDto.Name);
             command.Parameters.AddWithValue("@Description", animalDto.Description);
             command.Parameters.AddWithValue("@Category", animalDto.Category);
@@ -74,27 +73,6 @@ public class AnimalRepository : IAnimalRepository
             animalDto.Category = Convert.ToString(command.ExecuteScalarAsync());
             animalDto.Area = Convert.ToString(command.ExecuteScalarAsync());
             
-            // using (SqlDataReader reader = await command.ExecuteReaderAsync())
-            // {
-            //     while (reader.Read())
-            //     {
-            //         string genreName = reader["name"].ToString();
-            //         genres.Add(genreName);
-            //     }
-            // }
         }
-
-        // var animal = new Animal();
-        // animal.Name = animalDto.Name;
-        // animal.IdAnimal = lista.Count;
-        // animal.Area = animalDto.Area;
-        // animal.Category = animalDto.Category;
-        // animal.Description = animalDto.Description;
-        //
-        // lista.Add(animal);
-        
-        
-        // Connection string do pjatkowej bazy
-        //Data Source=db-mssql16.pjwstk.edu.pl;Initial Catalog=2019SBD/s28829;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False
     }
 }

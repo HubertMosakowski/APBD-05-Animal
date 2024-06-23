@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APINauka")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d1df2ace84d314f330c154a1f9ec09b9317555f4")]
 [assembly: System.Reflection.AssemblyProductAttribute("APINauka")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APINauka")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

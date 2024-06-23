@@ -21,8 +21,8 @@ public class AnimalController: Controller
         _config = configuration;
         _animalRepository.setConfig(_config);
     }
-    
-    [Microsoft.AspNetCore.Mvc.HttpGet("a")]
+
+    [Microsoft.AspNetCore.Mvc.HttpGet("get")]
     public async Task<ActionResult> GetAnimals()
     {
         return Ok(await _animalRepository.getAnimals());
